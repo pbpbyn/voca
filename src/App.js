@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./test_js.js";
 
 function App() {
+  const name = "Tom";
+  // const user = {
+  //   // 객체
+  //   name: "Jane",
+  // };
+  const naver = {
+    name: "네이버",
+    url: "http://naver.com",
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{ backgroundColor: "#1C315E", color: "#fff" }}>
+        Hello, {name}. <p>{2 + 3}</p>
+        {/* 중괄호 내에서 문자열이나 숫자는 잘 나오지만 불린타입이나 객체는 표현하지 못함
+        <p>{user}</p> */}
+      </h1>
+      <a href={naver.url} style={{ color: "#227C70" }}>
+        {naver.name}
+      </a>
     </div>
   );
 }
